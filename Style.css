@@ -1,0 +1,76 @@
+:root{
+
+    --primary-color: #E04D01;
+    --secondary-color: #2A2550;
+    --tertiary-color: #251D3A;
+    --quaternary-color: #FF7700;
+    --unlock-color: #00FF00;
+    --lock-color: #FF0000;
+    --background-color: #E9D5DA;
+
+
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: #ffffff;
+}
+
+*:first-letter{
+    text-transform: capitalize;
+
+}
+
+
+
+.borde{
+
+    border-radius: 5px;
+
+}
+
+.cuadro{
+
+
+    margin: 25px;
+    padding: 25px;
+    background-color: var(--secondary-color);
+    width: 100%;
+    max-width: 350px;
+
+}
+
+form{
+
+    margin: 25px, 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 15px;
+
+
+
+}
+
+.tarea{
+
+    background-color: var(--primary-color);
+    padding: 5px;
+    margin-top: 7px;
+    cursor: pointer;
+
+}
+
+
+.completado
+{
+
+    text-decoration: line-through;
+    background-color: var(--unlock-color);
+    color: var(--tertiary-color);
+
+
+
+}
