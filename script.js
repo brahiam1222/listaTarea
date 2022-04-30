@@ -4,10 +4,11 @@ const agregarTarea = e =>{
     e.preventDefault();
     const {value} = e.target.textoTarea;
     const tarea = document.createElement('div');
+    const boton = document.createElement('button');
     tarea.classList.add('tarea' , 'borde');
     tarea.addEventListener('click', cambioEstado);
     tarea.textContent = value;
-    contenido.prepend(tarea);
+    contenido.prepend(tarea, boton);
     e.target.reset();
 
 }
