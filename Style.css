@@ -17,6 +17,10 @@ body{
     height: 100vh;
     background-color: var(--background-color);
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 *:first-letter{
