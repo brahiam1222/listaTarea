@@ -4,11 +4,17 @@ contenido.setAttribute('display', 'grid', 'grid-template-columns' , '2fr 1fr');
 const agregarTarea = e =>{
     e.preventDefault();
     const {value} = e.target.textoTarea;
+    //validar que un campo no tenga espacios en blanco
+    if(value == '' || value.length == 0 || value.trim() == ''){ 
+        return alert('No puedes agregar una tarea vacia');
+        
+    }
     const tarea = document.createElement('div');
     tarea.setAttribute('id', 'listTarea');
     // const idTarea = document.getElementById('listTarea');
     const boton = document.createElement('button');
-    boton.textContent = 'x';
+    
+    boton.id = 'icono';
     tarea.classList.add('tarea' , 'borde');
     tarea.addEventListener( 'click', cambioEstado);
     boton.addEventListener('click', eliminar);
@@ -78,20 +84,20 @@ const ordenar = () =>{
             
 };
 
-const addBtnEliminar = () =>{
+// const addBtnEliminar = () =>{
     
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent='x';
+//     const deleteBtn = document.createElement('button');
+//     deleteBtn.textContent='x';
     
-    deleteBtn.addEventListener('click', e=>{
-        const item = e.target.parentElement;
-        div.removeChild(item);
-    });
+//     deleteBtn.addEventListener('click', e=>{
+//         const item = e.target.parentElement;
+//         div.removeChild(item);
+//     });
     
-    return deleteBtn;
+//     return deleteBtn;
     
     
-}
+// }
 
 
 
